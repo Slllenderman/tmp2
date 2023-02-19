@@ -1,0 +1,50 @@
+img{
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card {
+    background-color:burlywood;
+    border-radius: 20px;
+    display: grid;
+    width: 500px;
+    height: 180px;
+    grid-template-columns: 200px auto;
+}
+
+p {
+    text-decoration: none;
+    margin: 0 0;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-container{
+    width: 500px;
+    height: 180px;
+    margin-top: 20px;
+}
+
+.card-container > a {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    margin-top: 20px;
+}
+
+.desc {
+    margin: 10px 10px;
+}
+
+form {
+    margin-top: 10px;
+}

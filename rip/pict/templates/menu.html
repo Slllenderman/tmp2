@@ -1,0 +1,35 @@
+<!doctype html>
+{% load static %}
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static "/styles/index.css" %}"/>
+    </head>
+    <body>
+        <div class="title">Художественная студия</div>
+        <form class="filter" method="post" action="">
+            {% csrf_token %}
+            <p>Количество картин: <input name="count" type="number"/></p>
+            <input class="submit" type="submit" value="Показать"/>
+        </form>
+        <form class="filter" method="post" action>
+            {% csrf_token %}
+            <p>Удалить картину: <input name="delId" type="number" value=""/></p>
+            <input class="submit" type="submit" value="Удалить"/>
+        </form>
+        {% for pict in pictures %}
+        <div class="card-container">
+            <a href="/item/{{pict.pk}}">
+                <div class="card">
+                    <img src="{{pict.image}}"/>
+                    <div class="info">
+                        <p class="title">{{pict.title}}</p>
+                        <p class="author">Автор: {{pict.author}}</p>
+                        <p class="price">Цена: {{pict.price}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+{% load static %}
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static "styles/index.css" %}"/>
+    </head>
+    <body>
+        <div class="card-container">
+                <div class="card">
+                    <img src="/{{image}}"/>
+                    <div class="info">
+                        <p class="title">{{title}}</p>
+                        <p class="author">Автор: {{author}}</p>
+                        <p class="price">Цена: {{price}}</p>
+                    </div>
+                </div>
+                <p class="desc">Описание: {{description}}</p>
+        </div>
+    </body>
+</html>
